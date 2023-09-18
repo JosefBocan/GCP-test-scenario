@@ -1,0 +1,11 @@
+#  Local .terraform directories
+.terraform.lock.hcl
+.terraform/*
+terraform/*
+
+test-1-399414-3e1746b17980.json
+tester.pub
+
+# IntelliJ Idea
+.idea
+*.iml

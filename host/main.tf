@@ -56,7 +56,7 @@ resource "google_compute_firewall" "fw_allow_health_check" {
   project       = "${var.PROJECT}"
   direction     = "INGRESS"
   network       = google_compute_network.lb_network.id
-  source_ranges = ["130.211.0.0/22", "35.191.0.0/16"] # Google health check IP ranges 
+  source_ranges = ["130.211.0.0/22", "35.191.0.0/16"] # Google health check IP ranges -\_('_')_/-
   allow {
     protocol = "tcp"
   }
@@ -120,7 +120,6 @@ resource "google_compute_instance_template" "default" {
     network    = google_compute_network.lb_network.id
     subnetwork = google_compute_subnetwork.lb_frontend_and_backend_subnet.id
     access_config {
-      # add external ip to fetch packages like apache2, ssl
     }
   }
   disk {
@@ -255,6 +254,7 @@ resource "google_compute_instance" "bastion_host" {
       private_key = file("~/.ssh/my_google_cloud_key")
     }
   }
+  # http2 -\_('_')_/-
   metadata_startup_script = <<-EOL
     #!/bin/bash
     # Install Apache

@@ -1,0 +1,5 @@
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.plan
+host-2/host-2-399515-7f09e8844f24.json

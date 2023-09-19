@@ -1,0 +1,9 @@
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  labels:
+    app: "nginx-service"
+    version: "1.0.0"
+  name: "nginx-service"
+spec:
+  replicas: 4

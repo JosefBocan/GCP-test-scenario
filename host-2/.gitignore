@@ -1,0 +1,10 @@
+#  Local .terraform directories
+.terraform.lock.hcl
+.terraform/*
+terraform/*
+
+host-2-399515-7f09e8844f24.json
+
+# IntelliJ Idea
+.idea
+*.iml
